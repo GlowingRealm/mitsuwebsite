@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Mitsu Website">
+    <meta name="keywords" content="mitsu, discord bot, discord, economy, fun, customizability, general purpose">
+    <meta property="og:site_name" content="Mitsu Website">
+    <meta property="og:title" content="Gamify your community with Mitsu">
+    <meta property="og:description" content="Hello, my name is Mitsu, a bot focused on economy and fun! Currently in beta phase.">
+    <meta property="og:image" content="https://imgur.com/a/2C5CmTc">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mitsu Website</title>
+</head>
+<body>
+    <!--Inicio da Seção Principal-->
+    <section>
+        <header>
+            <a href="#"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
+            <nav class="navigation">
+                <ul>
+                    <li class="link"><a href="#">Home</a></li>
+                    <li class="link"><a href="#">Suporte</a></li>
+                    <li class="link"><a href="#">Vote em Mim</a></li>
+                </ul>
+                <a class="button" href="#">Lista de Comandos</a>
+            </nav>
+        </header>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header")
+                header.classList.toggle("sticky", window.scrollY > 0)
+            })
+        </script>
+        <div class="container">
+            <div class="text">
+                <h2>Gamify your community with Mitsu</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tempore dolorem, suscipit at itaque et, enim soluta odio, consequatur voluptatum similique ipsam reprehenderit tenetur exercitationem veritatis eius. Excepturi, amet enim?</p>
+                <a href="#">Me Adicione</a>
+            </div>
+            <ul class="icons">
+                <li><a href="#"><img src="assets/img/twitter.png" width="25" height="25" alt="icons"></a></li>
+                <li><a href="#"><img src="assets/img/discord.png" width="30" height="20" alt="icons"></a></li>
+            </ul>
+        </div>
+        <div class="boxImg">
+            <img src="assets/img/commands.png" alt="" class="img">
+        </div>
+        <a href="#stats">
+            <div class="scroll-down">
+                <span></span>
+            </div>
+        </a>
+        <div class="custom-shape-divider-bottom-1685727846">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <div class="stats" id="stats">
+        <div class="title">
+            <h2>Algumas informações!</h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fa-solid fa-server"></i>
+                <h5 id="guilds"></h5>
+                <div class="pra">
+                    <p>Servidores que possuem a incrível e inigualável mitsu!</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-hashtag"></i>
+                <h5>+40 Comandos</h5>
+                <div class="pra">
+                    <p>Uma verdadeira caixinha de surpresa e alegria!</p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h5 id="users">Usuários</h5>
+                <div class="pra">
+                    <p>Pessoas muito legais que apoiam e usam a Mitsu!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_content">
+            <div id="footers_contacts">
+                <a href="#"><img src="assets/img/logo.png" alt="logo" class="logo"></a>
+                <p>É tudo sobre a gente.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Links Rápidos</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Vote em Mim</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Me Adicione</a>
+                </li>
+            </ul>
+            <ul class="footer-list">
+                <li>
+                    <h3>Mais Links</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Servidor do Discord</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fandom de Ajuda</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Minha Equipe</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 Mitsu Team, All rights reserved
+        </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
+    <script>
+        fetch('https://raw.githubusercontent.com/OutroNinja/OutroNinja/main/mitsu/stats.json')
+            .then(response => response.json())
+            .then(data => {
+                const guilds = data.guilds;
+                const users = data.users;
+
+                const guildsElement = document.getElementById('guilds');
+                guildsElement.textContent = data.guilds + " Servidores";
+
+                const usersElement = document.getElementById('users');
+                usersElement.textContent = data.guilds + " Usuários";
+            })
+        .catch(error => {
+            // Lida com erros, se houver algum
+            console.error('Erro ao recuperar os dados do Discord:', error);
+        });
+
+    </script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+		    max: 25,
+		    speed: 400,
+            glare: false,
+            "max-glare": 0.1
+	});
+    </script>
+</body>
+</html>
