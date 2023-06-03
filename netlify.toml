@@ -1,4 +1,10 @@
 [[redirects]]
   from = "/*"
-  to = "/pages/404.html" 
+  to = "/pages/404" 
   status = 404
+  
+[[redirects]]
+  from = "/pages/*"
+  to = "/:splat"
+  status = 301
+  force = true
