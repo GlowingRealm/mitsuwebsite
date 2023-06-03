@@ -288,15 +288,6 @@ h5{
     margin-bottom: 25px;
     text-align: left;
 }
-#economy{
-    color:#028fce;
-}
-#reward{
-    color:#f7d984;
-}
-#explore{
-    color: #ec5049;
-}
 .custom-shape-divider-bottom-1685727846 {
     position: absolute;
     bottom: 0;
@@ -314,4 +305,45 @@ h5{
 }
 .custom-shape-divider-bottom-1685727846 .shape-fill {
     fill: #151515;
+}
+.staffs{
+    background: #151515;
+    width: 100%;
+    padding: 1px 0px;
+    padding-bottom: 100px;
+}
+.staffs .card h5{
+    margin: 10px auto;
+    text-align: center;
+    font-weight: normal;
+    font-size: 35px;
+    color: #fff;
+}
+.staffs .card img{
+    height: 180px;
+    width: 180px;
+}
+.staffs .box a{
+    display: flex;
+    padding: 10px 40px;
+    border-radius: 40px;
+    background: #222;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.staffs li{
+    list-style: none;
+}
+.staffs ul{
+    position: relative;
+}
+#dev{
+    background: #5865f2;
+}
+#des{
+    background: #FFB700;
+}
+#ajd{
+    background: #353535;
 }
