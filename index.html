@@ -13,11 +13,16 @@
     <meta property="og:image" content="https://imgur.com/a/2C5CmTc">
     <meta property="og:type" content="website">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Mitsu Website</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon.ico">
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--Inicio da Seção Principal-->
     <section>
         <header>
@@ -28,8 +33,8 @@
                     <li class="link"><a href="#">Suporte</a></li>
                     <li class="link"><a href="#">Vote em Mim</a></li>
                 </ul>
-                <a class="button" href="#">Lista de Comandos</a>
-            </nav>
+                <a class="button" href="pages/commands.html">Lista de Comandos</a>
+            </nav>  
         </header>
         <script type="text/javascript">
             window.addEventListener("scroll", function(){
@@ -41,7 +46,7 @@
             <div class="text">
                 <h2>Gamify your community with Mitsu</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tempore dolorem, suscipit at itaque et, enim soluta odio, consequatur voluptatum similique ipsam reprehenderit tenetur exercitationem veritatis eius. Excepturi, amet enim?</p>
-                <a href="#">Me Adicione</a>
+                <a href="pages/invite.html">Me Adicione</a>
             </div>
             <ul class="icons">
                 <li><a href="#"><img src="assets/img/twitter.png" width="25" height="25" alt="icons"></a></li>
@@ -93,28 +98,25 @@
     <div class="wrapper">
         <div class="divider div-transparent"></div>
     </div>
-    <div class="staffs">
-        <div class="title">
-            <h2>Minha Equipe</h2>
-        </div>
+    <div class="contributors" id="contributors">
+        <h2 class="title">Minha Equipe</h2>
+        <div class="carousel owl-carousel"></div>
+        
         <div class="box">
-            <div class="card">
+            <div class="cardd">
                 <img src="assets/img/ninja_avatar.png">
-                <h5>NINJA</h5>
-                <ul>
-                    <li>
-                        <a class="role" id="dev">Developer</a>
-                    </li>
-                </ul>
+                <div class="text">NINJA#3825</div>
+                <p>
+                    <button class="badges owner">Owner</button>
+                    <button class="badges developer">Developer</button>
+                </p>
             </div>
-            <div class="card">
+            <div class="cardd">
                 <img src="assets/img/tempest_avatar.png">
-                <h5>Tempest</h5>
-                <ul>
-                    <li>
-                        <a class="role" id="ajd">Ajudante</a>
-                    </li>
-                </ul>
+                <div class="text">Tempest#9970</div>
+                <p>
+                    <button class="badges supporter">Suporte</button>
+                </p>
             </div>
         </div>
     </div>
@@ -142,7 +144,7 @@
                     <a href="#" class="footer-link">Vote em Mim</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-link">Me Adicione</a>
+                    <a href="pages/invite.html" class="footer-link">Me Adicione</a>
                 </li>
             </ul>
             <ul class="footer-list">
@@ -168,7 +170,7 @@
     </footer>
     <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
     <script>
-        fetch('https://raw.githubusercontent.com/OutroNinja/OutroNinja/main/mitsu/stats.json')
+        fetch('https://gist.githubusercontent.com/OutroNinja/3e698f568206745fb59bea7dca287196/raw/mitsustats.json')
             .then(response => response.json())
             .then(data => {
                 const guilds = data.guilds;
@@ -178,7 +180,7 @@
                 guildsElement.textContent = data.guilds + " Servidores";
 
                 const usersElement = document.getElementById('users');
-                usersElement.textContent = data.guilds + " Usuários";
+                usersElement.textContent = data.users + " Usuários";
             })
         .catch(error => {
             // Lida com erros, se houver algum
@@ -187,7 +189,7 @@
 
     </script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".card"), {
+        VanillaTilt.init(document.querySelectorAll(".card, .cardd"), {
 		    max: 25,
 		    speed: 400,
             glare: false,
