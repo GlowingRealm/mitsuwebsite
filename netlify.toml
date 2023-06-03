@@ -2,7 +2,3 @@
   from = "/*"
   to = "/pages/404" 
   status = 404
-  
-[[redirects]]
-  from = "/pages/*"
-  to = "/:splat"
