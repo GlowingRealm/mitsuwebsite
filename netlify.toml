@@ -6,5 +6,3 @@
 [[redirects]]
   from = "/pages/*"
   to = "/:splat"
-  status = 301
-  force = true
