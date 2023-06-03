@@ -391,3 +391,40 @@ h5{
 .badges.helper{
     background: #2DD5FF;
 }
+.features{
+    background: #151515;
+    width: 100%;
+    padding: 1px 0px;
+    padding-bottom: 0px;
+}
+.features .title{
+    margin-top: 150px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+}
+.features .description{
+    margin-top: 25px;
+    color: #898989;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+}
+.carddd i{
+    font-size: 80px;
+    display: block;
+    text-align: center;
+    margin: 35px 0px;
+    color: #e2e2e2
+}
+.carddd .subtitle{
+    color: #949494;
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.carddd .text{
+    color: #fff;
+    max-width: 250px;
+}
