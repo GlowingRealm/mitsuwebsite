@@ -328,69 +328,6 @@ h5{
 	height: 1px;
 	background-image: linear-gradient(to right, transparent, rgb(255,255,255), transparent);
 }
-.contributors{
-    background: #151515;
-    width: 100%;
-    padding: 1px 0px;
-    padding-bottom: 100px;
-}
-.contributors .title{
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 50px;
-    padding-bottom: 20px;
-}
-.contributors .cardd{
-    background: #121212;
-    height: 335px;
-    width: 335px;
-    border-radius: 20px;
-    padding: 25px 35px;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.contributors .cardd .text{
-    font-size: 25px;
-    font-weight: bold;
-    margin: 5px 0 15px 0;
-    color: #fff;
-}
-.contributors .cardd img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 0px solid #5865f2;
-}
-.badges{
-    font-weight: normal;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 40px;
-    margin-left: 5px;
-    color: #fff;
-}
-.badges.owner{
-    background: #5865f2;
-}
-.badges.developer{
-    background: #ff9671;
-    border: none;
-}
-.badges.supporter{
-    background: #ffc75f;
-}
-.badges.designer{
-    background: #845ec2;
-}
-.badges.helper{
-    background: #2DD5FF;
-}
 .features{
     background: #151515;
     width: 100%;
@@ -410,6 +347,9 @@ h5{
     text-align: center;
     font-weight: normal;
     font-size: 20px;
+}
+.carddd{
+    margin-right: 50px;
 }
 .carddd i{
     font-size: 80px;
